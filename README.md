@@ -43,6 +43,9 @@ If there is one of the following changes the diff command will show you:
 **After Changes**
 ![After Changes](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/after-changes.png)
 
+**diff Command**
+![diff](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/diff.png)
+
 ## Drawbacks
 
 * Doesn't detect if only the file's meta-data was changed
