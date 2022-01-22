@@ -33,3 +33,34 @@ If there is one of the following changes the diff command will show you:
 * Creation of a duplicate file
 
 ## DEMO
+
+**Before Changes**
+![Before Changes](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/before-changes.png)
+
+**Changing**
+![Changing](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/malicious-change.png)
+
+**After Changes**
+![After Changes](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/after-changes.png)
+
+## Drawbacks
+
+* Doesn't detect if only the file's meta-data was changed
+* Doesn't detect if file permissions was changed* (Serious Issue)
+
+In Linux File Permissions are stored in Inodes  along with the following details : 
+
+* Creation, read, and write timestamps
+* Location of the data
+* User and group IDs associated with the file
+* File size
+
+A Simple solution will be to compress each file into a *tar archive* which will preserve the permissions of the file.
+
+### Example
+
+![Example use of tar](https://github.com/saai-sudarsanan-d/Rook-DirectoryIntegrityCheck/blob/main/permission-change.png)
+
+This way we can check for changes in file permissions also.
+
+Thank You :)
